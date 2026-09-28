@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bin day - Wednesday A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#E6EAE4; --surface:#F7F9F5; --ink:#18201B; --muted:#57625A; --line:#C9D0C6;
+  --food:#8B5A2B; --green:#1E8C4E; --blue:#2677C8; --black:#23272A;
+  --binbody:#3A403C; --wed:#D9E3D5; --focus:#2677C8;
+  --display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141816; --surface:#1D2320; --ink:#E7ECE5; --muted:#9AA69D; --line:#343C37;
+    --food:#C0864F; --green:#3DB872; --blue:#5AA2EA; --black:#8C9496;
+    --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141816; --surface:#1D2320; --ink:#E7ECE5; --muted:#9AA69D; --line:#343C37;
+  --food:#C0864F; --green:#3DB872; --blue:#5AA2EA; --black:#8C9496;
+  --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+main{max-width:760px;margin:0 auto;padding:28px 20px 56px}
+h1,h2{font-family:var(--display);margin:0;line-height:1.05;letter-spacing:-0.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+
+/* Hero */
+.where{color:var(--muted);font-size:15px;margin:0 0 18px}
+.when{font-size:clamp(46px,11vw,84px);font-weight:800}
+.date{font-family:var(--display);font-weight:500;font-size:clamp(22px,4.6vw,30px);margin:6px 0 0}
+.instruction{margin:14px 0 0;font-size:18px;max-width:34em}
+.toggle{display:inline-block;margin:16px 0 0;font:inherit;font-size:16px;font-weight:700;background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:10px 18px;cursor:pointer}
+.toggle[hidden]{display:none}
+.moved{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:14px}
+
+.kerb{margin:30px 0 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:end;
+  padding:0 4px 14px;border-bottom:6px solid var(--line);position:relative}
+.bin{display:flex;flex-direction:column;align-items:center;text-align:center;transition:opacity .4s, filter .4s}
+.bin svg{width:100%;max-width:120px;height:auto;display:block}
+.bin.in{opacity:.28;filter:grayscale(1)}
+.binlabels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:10px 4px 0}
+.binlabels div{text-align:center;font-size:14px;line-height:1.3}
+.binlabels b{display:block;font-size:15px}
+.binlabels .state{display:block;margin-top:3px;color:var(--muted)}
+.binlabels .out .state{color:var(--ink);font-weight:700}
+@media (prefers-reduced-motion:no-preference){
+  .bin.out{animation:roll .6s cubic-bezier(.2,.8,.3,1) both}
+  .bin.out:nth-child(2){animation-delay:.08s}.bin.out:nth-child(3){animation-delay:.16s}.bin.out:nth-child(4){animation-delay:.24s}
+  @keyframes roll{from{transform:translateY(-14px);opacity:0}to{transform:none;opacity:1}}
+}
+
+section{margin-top:52px}
+h2{font-size:28px;font-weight:700;margin-bottom:14px}
+.sub{color:var(--muted);margin:-6px 0 16px;font-size:15px}
+
+/* Upcoming */
+.upcoming{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.upcoming li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 2px;border-bottom:1px solid var(--line)}
+.upcoming .d{font-weight:700}
+.upcoming .note{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.chip{font-size:13px;padding:3px 9px 3px 7px;border-radius:999px;background:var(--surface);border:1px solid var(--line);display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.chip i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* Calendar */
+.calhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.calhead h3{font-family:var(--display);font-size:22px;margin:0;font-weight:700}
+.navbtn{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer}
+.navbtn:disabled{opacity:.35;cursor:default}
+.calwrap{overflow-x:auto}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(40px,1fr));gap:4px;min-width:300px}
+.dow{font-size:13px;color:var(--muted);text-align:center;padding-bottom:4px}
+.dow.w{color:var(--ink);font-weight:700}
+.cell{min-height:62px;border-radius:10px;padding:6px 6px 8px;background:transparent;font-size:14px;display:flex;flex-direction:column;justify-content:space-between}
+.cell.wedcol{background:var(--wed)}
+.cell.has{background:var(--surface);border:1px solid var(--line)}
+.cell.today .num{background:var(--ink);color:var(--bg);border-radius:999px;padding:0 7px}
+.cell .num{align-self:flex-start;font-variant-numeric:tabular-nums}
+.cell.blank{visibility:hidden}
+.bars{display:flex;gap:3px;margin-top:6px}
+.bars i{flex:1;height:7px;border-radius:3px}
+.cell .flag{font-size:11px;line-height:1.2;color:var(--muted);margin-top:4px}
+.key{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:14px;color:var(--muted)}
+.key span{display:inline-flex;align-items:center;gap:6px}
+.key i{width:14px;height:7px;border-radius:3px;display:inline-block}
+
+/* Which bin */
+.search{width:100%;font:inherit;font-size:18px;padding:14px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.search:focus{border-color:var(--focus);outline:none}
+.results{list-style:none;padding:0;margin:12px 0 0}
+.results li{display:flex;justify-content:space-between;gap:12px;padding:10px 2px;border-bottom:1px solid var(--line)}
+.results .tip{display:block;color:var(--muted);font-size:14px}
+.empty{color:var(--muted);padding:10px 2px}
+
+.tips{padding-left:1.1em;margin:0}
+.tips li{margin-bottom:8px}
+footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer p{margin:0 0 8px}
+@media (max-width:480px){
+  .binlabels div{font-size:12px}.binlabels b{font-size:13px}
+  .upcoming li{flex-direction:column;align-items:flex-start}
+  .chips{justify-content:flex-start}
+  .cell{min-height:52px;padding:4px}
+  .cell .flag{display:none}
+}
+</style>
+</head>
+<body>
+<main>
+  <p class="where">Croydon kerbside collections, Wednesday A round</p>
+
+  <header id="hero" aria-live="polite">
+    <h1 class="when" id="when">Loading</h1>
+    <p class="date" id="date"></p>
+    <p class="instruction" id="instruction"></p>
+    <span class="moved" id="moved" hidden></span>
+    <div><button class="toggle" id="toggle" type="button" hidden></button></div>
+  </header>
+
+  <div class="kerb" id="kerb" aria-hidden="true"></div>
+  <div class="binlabels" id="binlabels"></div>
+
+  <section aria-labelledby="up-h">
+    <h2 id="up-h">Coming up</h2>
+    <ul class="upcoming" id="upcoming"></ul>
+  </section>
+
+  <section aria-labelledby="cal-h">
+    <h2 id="cal-h">Calendar</h2>
+    <p class="sub">Collections are on Wednesdays unless a date is marked as moved.</p>
+    <div class="calhead">
+      <button class="navbtn" id="prev" aria-label="Previous month">Previous</button>
+      <h3 id="monthlabel"></h3>
+      <button class="navbtn" id="next" aria-label="Next month">Next</button>
+    </div>
+    <div class="calwrap"><div class="cal" id="cal" role="grid"></div></div>
+    <div class="key" id="key"></div>
+  </section>
+
+  <section aria-labelledby="which-h">
+    <h2 id="which-h">Which bin does it go in?</h2>
+    <label for="q" class="sub" style="display:block;margin-top:-6px">Type an item, like "yoghurt pot" or "teabags".</label>
+    <input class="search" id="q" type="search" autocomplete="off" placeholder="Search items">
+    <ul class="results" id="results"></ul>
+  </section>
+
+  <section aria-labelledby="tips-h">
+    <h2 id="tips-h">Getting it right</h2>
+    <ul class="tips">
+      <li>Have everything out by 6am on collection day, at the front edge of your property, close to the pavement but not on it.</li>
+      <li>Flatten cardboard boxes before they go in the blue bin or box.</li>
+      <li>Empty and rinse containers before they go in the green bin or box.</li>
+      <li>Peel film lids off pots, tubs and trays. The film goes in general waste.</li>
+      <li>No food in the general waste bin. Food goes in the caddy, which is collected every week.</li>
+      <li>If a collection is missed, leave your bins out and check the service status at <a href="https://www.croydon.gov.uk/bin-status" target="_blank" rel="noopener">croydon.gov.uk/bin-status</a>.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Based on Croydon Council's 2025-2026 timetable (ref: Kerbside - Wednesday A), which runs to 25 November 2026. Check the council's site for the next timetable after that.</p>
+    <p>Full recycling guide: <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk/recycling</a></p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  const BINS = {
+    food:  {name:"Food", long:"Food caddy", v:"--food"},
+    green: {name:"Green", long:"Plastics, glass, cans & cartons", v:"--green"},
+    blue:  {name:"Blue", long:"Paper & card", v:"--blue"},
+    black: {name:"Black", long:"General waste", v:"--black"}
+  };
+  const ORDER = ["food","green","blue","black"];
+  const A = ["food","green"], B = ["food","blue","black"];
+
+  const RAW = [
+    ["2025-12-03",B],["2025-12-10",A],["2025-12-17",B],["2025-12-24",A],
+    ["2026-01-02",B,"Moved to Friday for New Year"],["2026-01-08",A,"Moved to Thursday for New Year"],
+    ["2026-01-14",B],["2026-01-21",A],["2026-01-28",B],
+    ["2026-02-04",A],["2026-02-11",B],["2026-02-18",A],["2026-02-25",B],
+    ["2026-03-04",A],["2026-03-11",B],["2026-03-18",A],["2026-03-25",B],
+    ["2026-04-01",A],["2026-04-08",B],["2026-04-15",A],["2026-04-22",B],["2026-04-29",A],
+    ["2026-05-06",B],["2026-05-13",A],["2026-05-20",B],["2026-05-27",A],
+    ["2026-06-03",B],["2026-06-10",A],["2026-06-17",B],["2026-06-24",A],
+    ["2026-07-01",B],["2026-07-08",A],["2026-07-15",B],["2026-07-22",A],["2026-07-29",B],
+    ["2026-08-05",A],["2026-08-12",B],["2026-08-19",A],["2026-08-26",B],
+    ["2026-09-02",A],["2026-09-09",B],["2026-09-16",A],["2026-09-23",B],["2026-09-30",A],
+    ["2026-10-07",B],["2026-10-14",A],["2026-10-21",B],["2026-10-28",A],
+    ["2026-11-04",B],["2026-11-11",A],["2026-11-18",B],["2026-11-25",A]
+  ];
+  const EXTRA = {"2026-01-06":"Christmas tree collections start"};
+
+  const toDate = s => { const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
+  const key = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const SCHED = RAW.map(([s,bins,note]) => ({s, d:toDate(s), bins, note}));
+  const BYKEY = Object.fromEntries(SCHED.map(c => [c.s,c]));
+
+  const fmtLong = d => d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
+  const fmtShort = d => d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"});
+  const colour = b => "var("+BINS[b].v+")";
+
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const DAY = 86400000;
+
+  // Today's collection stays on screen for the whole day
+  const upcoming = SCHED.filter(c => c.d >= today);
+  const next = upcoming[0];
+  const isCollectionDay = !!next && +next.d === +today;
+  let showFollowing = false;
+
+  function binSVG(b){
+    const lid = colour(b);
+    if (b === "food") {
+      return `<svg viewBox="0 0 120 150"><rect x="30" y="62" width="60" height="70" rx="8" fill="var(--binbody)"/>
+        <rect x="26" y="54" width="68" height="14" rx="5" fill="var(--binbody)"/>
+        <path d="M40 56 Q60 30 80 56" fill="none" stroke="var(--binbody)" stroke-width="5" stroke-linecap="round"/>
+        <rect x="42" y="84" width="36" height="22" rx="4" fill="${lid}"/></svg>`;
+    }
+    return `<svg viewBox="0 0 120 150"><path d="M26 34 L94 34 L88 132 L32 132 Z" fill="var(--binbody)"/>
+      <rect x="20" y="22" width="80" height="14" rx="4" fill="${lid}"/>
+      <rect x="92" y="18" width="10" height="8" rx="2" fill="${lid}"/>
+      <line x1="40" y1="52" x2="42" y2="118" stroke="rgba(255,255,255,.08)" stroke-width="4"/>
+      <circle cx="36" cy="136" r="9" fill="var(--ink)"/><circle cx="36" cy="136" r="3" fill="var(--bg)"/></svg>`;
+  }
+
+  function renderHero(){
+    const when = document.getElementById("when"), date = document.getElementById("date"),
+          ins = document.getElementById("instruction"), moved = document.getElementById("moved");
+    const kerb = document.getElementById("kerb"), labels = document.getElementById("binlabels");
+    if (!next){
+      when.textContent = "Timetable ended";
+      date.textContent = "The last listed collection was Wednesday 25 November 2026.";
+      ins.innerHTML = 'Check <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk</a> for the 2026-2027 timetable.';
+      kerb.innerHTML = ORDER.map(b => `<div class="bin in">${binSVG(b)}</div>`).join("");
+      labels.innerHTML = "";
+      return;
+    }
+    const target = (isCollectionDay && showFollowing) ? upcoming[1] : next;
+    const toggle = document.getElementById("toggle");
+    if (isCollectionDay && upcoming[1]){
+      toggle.hidden = false;
+      toggle.textContent = showFollowing ? "Back to today's collection" : "Show next week's collection";
+    } else toggle.hidden = true;
+    if (!target){
+      when.textContent = "No more listed";
+      date.textContent = "Today's is the last collection in this timetable.";
+      ins.innerHTML = 'Check <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk</a> for the 2026-2027 timetable.';
+      moved.hidden = true; kerb.innerHTML = ""; labels.innerHTML = ""; return;
+    }
+    const days = Math.round((target.d - today)/DAY);
+    let w, i;
+    if (days === 0){ w = "Today's collection"; i = "Bins need to be out by 6am. The crews come round at any point during the day, so leave everything out until it's been emptied."; }
+    else if (days === 1){ w = "Tomorrow"; i = "Put these out tonight, or before 6am tomorrow."; }
+    else if (days < 7){ w = "This " + target.d.toLocaleDateString("en-GB",{weekday:"long"}); i = "Out by 6am on the day."; }
+    else if (days < 14){ w = "Next " + target.d.toLocaleDateString("en-GB",{weekday:"long"}); i = "Out by 6am on the day."; }
+    else { w = "In " + days + " days"; i = "Out by 6am on the day."; }
+    when.textContent = w;
+    date.textContent = fmtLong(target.d);
+    ins.textContent = i;
+    if (target.note){ moved.hidden = false; moved.textContent = target.note; } else moved.hidden = true;
+
+    kerb.innerHTML = ORDER.map(b => `<div class="bin ${target.bins.includes(b)?"out":"in"}">${binSVG(b)}</div>`).join("");
+    labels.innerHTML = ORDER.map(b => {
+      const out = target.bins.includes(b);
+      return `<div class="${out?"out":""}"><b>${BINS[b].name}</b>${BINS[b].long}<span class="state">${out?"Put out":"Stays in"}</span></div>`;
+    }).join("");
+  }
+
+  function chips(bins){
+    return `<span class="chips">${bins.map(b=>`<span class="chip"><i style="background:${colour(b)}"></i>${BINS[b].name}</span>`).join("")}</span>`;
+  }
+
+  function renderUpcoming(){
+    const ul = document.getElementById("upcoming");
+    const list = upcoming.slice(0,6);
+    if (!list.length){ ul.innerHTML = `<li><span>No more collections in this timetable.</span></li>`; return; }
+    ul.innerHTML = list.map(c => `<li><span class="d">${+c.d === +today ? "Today" : fmtShort(c.d)}${c.note?`<span class="note">${c.note}</span>`:""}</span>${chips(c.bins)}</li>`).join("");
+  }
+
+  // Calendar
+  const FIRST = new Date(2025,11,1), LAST = new Date(2026,10,1);
+  let view = next ? new Date(next.d.getFullYear(), next.d.getMonth(), 1) : new Date(LAST);
+  if (view < FIRST) view = new Date(FIRST);
+  if (view > LAST) view = new Date(LAST);
+
+  function renderCal(){
+    const cal = document.getElementById("cal");
+    document.getElementById("monthlabel").textContent = view.toLocaleDateString("en-GB",{month:"long",year:"numeric"});
+    document.getElementById("prev").disabled = +view <= +FIRST;
+    document.getElementById("next").disabled = +view >= +LAST;
+    const names = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+    let html = names.map((n,i)=>`<div class="dow${i===2?" w":""}">${n}</div>`).join("");
+    const y = view.getFullYear(), m = view.getMonth();
+    const lead = (new Date(y,m,1).getDay()+6)%7;
+    const count = new Date(y,m+1,0).getDate();
+    for (let i=0;i<lead;i++) html += `<div class="cell blank"></div>`;
+    for (let d=1; d<=count; d++){
+      const dt = new Date(y,m,d), k = key(dt), c = BYKEY[k];
+      const isWed = dt.getDay() === 3;
+      const cls = ["cell"]; if (isWed) cls.push("wedcol"); if (c) cls.push("has"); if (+dt === +today) cls.push("today");
+      let inner = `<span class="num">${d}</span>`;
+      let label = fmtLong(dt);
+      if (c){
+        inner += `<div class="bars">${c.bins.map(b=>`<i style="background:${colour(b)}"></i>`).join("")}</div>`;
+        if (c.note) inner += `<span class="flag">Moved</span>`;
+        label += ": " + c.bins.map(b=>BINS[b].name).join(", ") + (c.note ? ". " + c.note : "");
+      }
+      if (EXTRA[k]){ inner += `<span class="flag">Trees</span>`; label += ". " + EXTRA[k]; }
+      html += `<div class="${cls.join(" ")}" role="gridcell" aria-label="${label}">${inner}</div>`;
+    }
+    cal.innerHTML = html;
+  }
+  document.getElementById("prev").addEventListener("click",()=>{ view = new Date(view.getFullYear(), view.getMonth()-1, 1); renderCal(); });
+  document.getElementById("next").addEventListener("click",()=>{ view = new Date(view.getFullYear(), view.getMonth()+1, 1); renderCal(); });
+  document.getElementById("key").innerHTML = ORDER.map(b=>`<span><i style="background:${colour(b)}"></i>${BINS[b].long}</span>`).join("");
+
+  // Which bin
+  const ITEMS = [
+    ["Cardboard boxes","blue","Flatten first"],["Cereal boxes","blue"],["Newspapers","blue"],["Magazines","blue"],
+    ["Envelopes","blue"],["Office paper","blue"],["Junk mail","blue"],["Egg boxes (cardboard)","blue"],
+    ["Plastic bottles","green","Empty and rinse"],["Yoghurt pots","green","Remove the film lid"],["Plastic tubs","green","Remove the film lid"],
+    ["Plastic food trays","green","Remove the film lid"],["Glass bottles","green","Empty and rinse"],["Glass jars","green","Empty and rinse"],
+    ["Food tins","green","Empty and rinse"],["Drinks cans","green","Empty and rinse"],["Food and drink cartons","green","Empty and rinse"],
+    ["Milk cartons","green","Empty and rinse"],
+    ["Film lids","black","Peel off pots, tubs and trays"],["Nappies","black"],["Crisp packets","black"],
+    ["Food scraps","food"],["Fruit and veg peelings","food"],["Teabags","food"],["Coffee grounds","food"],
+    ["Leftovers","food"],["Meat and fish bones","food"],["Eggshells","food"],["Bread","food"]
+  ];
+  const q = document.getElementById("q"), res = document.getElementById("results");
+  function renderResults(){
+    const term = q.value.trim().toLowerCase();
+    if (!term){ res.innerHTML = ""; return; }
+    const hits = ITEMS.filter(([n]) => n.toLowerCase().includes(term) || term.split(/\s+/).every(t => n.toLowerCase().includes(t)));
+    if (!hits.length){
+      res.innerHTML = `<li class="empty">Not in this list. Look it up at <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk/recycling</a>.</li>`;
+      return;
+    }
+    res.innerHTML = hits.map(([n,b,t]) => `<li><span>${n}${t?`<span class="tip">${t}</span>`:""}</span>${chips([b])}</li>`).join("");
+  }
+  q.addEventListener("input", renderResults);
+  document.getElementById("toggle").addEventListener("click", () => { showFollowing = !showFollowing; renderHero(); });
+
+  renderHero(); renderUpcoming(); renderCal();
+})();
+</script>
+</body>
+</html>

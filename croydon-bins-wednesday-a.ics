@@ -1,0 +1,798 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Bin schedule//Croydon Wednesday A//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Bin collections (Croydon Wed A)
+X-WR-TIMEZONE:Europe/London
+BEGIN:VEVENT
+UID:2025-12-03@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20251203
+DTEND;VALUE=DATE:20251204
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-12-10@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20251210
+DTEND;VALUE=DATE:20251211
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-12-17@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20251217
+DTEND;VALUE=DATE:20251218
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2025-12-24@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20251224
+DTEND;VALUE=DATE:20251225
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-01-02@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260102
+DTEND;VALUE=DATE:20260103
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Moved to Friday for New Year.\n\nFood caddy\nBlue: paper & card
+ \nBlack: general waste\n\nOut by 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-01-08@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260109
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Moved to Thursday for New Year.\n\nFood caddy\nGreen: plastics,
+  glass, cans & cartons\n\nOut by 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-01-14@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260114
+DTEND;VALUE=DATE:20260115
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-01-21@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260121
+DTEND;VALUE=DATE:20260122
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-01-28@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260128
+DTEND;VALUE=DATE:20260129
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-02-04@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260204
+DTEND;VALUE=DATE:20260205
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-02-11@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260211
+DTEND;VALUE=DATE:20260212
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-02-18@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260218
+DTEND;VALUE=DATE:20260219
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-02-25@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260225
+DTEND;VALUE=DATE:20260226
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-03-04@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260304
+DTEND;VALUE=DATE:20260305
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-03-11@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260311
+DTEND;VALUE=DATE:20260312
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-03-18@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260318
+DTEND;VALUE=DATE:20260319
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-03-25@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260325
+DTEND;VALUE=DATE:20260326
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-01@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260401
+DTEND;VALUE=DATE:20260402
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-08@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260408
+DTEND;VALUE=DATE:20260409
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-15@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260415
+DTEND;VALUE=DATE:20260416
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-22@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260423
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-29@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260429
+DTEND;VALUE=DATE:20260430
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-06@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260506
+DTEND;VALUE=DATE:20260507
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-13@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260513
+DTEND;VALUE=DATE:20260514
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-20@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260520
+DTEND;VALUE=DATE:20260521
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-05-27@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260527
+DTEND;VALUE=DATE:20260528
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-03@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260603
+DTEND;VALUE=DATE:20260604
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-10@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20260611
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-17@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260617
+DTEND;VALUE=DATE:20260618
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-06-24@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260624
+DTEND;VALUE=DATE:20260625
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-01@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260702
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-08@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260708
+DTEND;VALUE=DATE:20260709
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-15@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260715
+DTEND;VALUE=DATE:20260716
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-22@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260722
+DTEND;VALUE=DATE:20260723
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-07-29@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260729
+DTEND;VALUE=DATE:20260730
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-05@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260805
+DTEND;VALUE=DATE:20260806
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-12@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260812
+DTEND;VALUE=DATE:20260813
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-19@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260819
+DTEND;VALUE=DATE:20260820
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-08-26@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260826
+DTEND;VALUE=DATE:20260827
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-02@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260902
+DTEND;VALUE=DATE:20260903
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-09@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260909
+DTEND;VALUE=DATE:20260910
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-16@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260916
+DTEND;VALUE=DATE:20260917
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-23@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260923
+DTEND;VALUE=DATE:20260924
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-09-30@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260930
+DTEND;VALUE=DATE:20261001
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-07@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-11@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-18@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:Bins: Food + Blue + Black
+DESCRIPTION:Food caddy\nBlue: paper & card\nBlack: general waste\n\nOut by 
+ 6am, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Blue + Black
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-25@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:Bins: Food + Green
+DESCRIPTION:Food caddy\nGreen: plastics, glass, cans & cartons\n\nOut by 6a
+ m, at the front edge of your property.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put bins out tonight: Food + Green
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:trees-2026@croydon-bins-wed-a
+DTSTAMP:20260928T221114Z
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260107
+SUMMARY:Christmas tree collections start
+DESCRIPTION:Put your real tree out from today. It will be collected as soon
+  as possible.
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
