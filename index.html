@@ -14,7 +14,7 @@
   padding-bottom:env(safe-area-inset-bottom,0px);
   --bg:#E6EAE4; --surface:#F7F9F5; --ink:#18201B; --muted:#57625A; --line:#C9D0C6;
   --food:#8B5A2B; --green:#1E8C4E; --blue:#2677C8; --black:#23272A;
-  --binbody:#3A403C; --wed:#D9E3D5; --focus:#2677C8;
+  --binbody:#3A403C; --wed:#D9E3D5; --focus:#2677C8; --garden:#7C8F1E;
   --display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;
   --body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
@@ -22,13 +22,13 @@
   :root:not([data-theme="light"]){
     --bg:#141816; --surface:#1D2320; --ink:#E7ECE5; --muted:#9AA69D; --line:#343C37;
     --food:#C0864F; --green:#3DB872; --blue:#5AA2EA; --black:#8C9496;
-    --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA;
+    --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA; --garden:#A9C23A;
   }
 }
 :root[data-theme="dark"]{
   --bg:#141816; --surface:#1D2320; --ink:#E7ECE5; --muted:#9AA69D; --line:#343C37;
   --food:#C0864F; --green:#3DB872; --blue:#5AA2EA; --black:#8C9496;
-  --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA;
+  --binbody:#56605A; --wed:#232B26; --focus:#5AA2EA; --garden:#A9C23A;
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -63,6 +63,11 @@ a{color:inherit}
   @keyframes roll{from{transform:translateY(-14px);opacity:0}to{transform:none;opacity:1}}
 }
 
+.garden{margin-top:26px;display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--garden)}
+.garden svg{width:46px;height:auto;flex:none}
+.garden .gt{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.2}
+.garden .gw{display:block;color:var(--muted);font-size:15px}
+.caveat{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
 section{margin-top:52px}
 h2{font-size:28px;font-weight:700;margin-bottom:14px}
 .sub{color:var(--muted);margin:-6px 0 16px;font-size:15px}
@@ -133,6 +138,7 @@ footer p{margin:0 0 8px}
 
   <div class="kerb" id="kerb" aria-hidden="true"></div>
   <div class="binlabels" id="binlabels"></div>
+  <div class="garden" id="garden"></div>
 
   <section aria-labelledby="up-h">
     <h2 id="up-h">Coming up</h2>
@@ -141,7 +147,7 @@ footer p{margin:0 0 8px}
 
   <section aria-labelledby="cal-h">
     <h2 id="cal-h">Calendar</h2>
-    <p class="sub">Collections are on Wednesdays unless a date is marked as moved.</p>
+    <p class="sub">Main collections are on Wednesdays unless a date is marked as moved. Garden waste is every other Thursday.</p>
     <div class="calhead">
       <button class="navbtn" id="prev" aria-label="Previous month">Previous</button>
       <h3 id="monthlabel"></h3>
@@ -166,12 +172,14 @@ footer p{margin:0 0 8px}
       <li>Empty and rinse containers before they go in the green bin or box.</li>
       <li>Peel film lids off pots, tubs and trays. The film goes in general waste.</li>
       <li>No food in the general waste bin. Food goes in the caddy, which is collected every week.</li>
+      <li>Garden waste dates here follow the fortnightly Thursday pattern and may change. Check your next garden collection on the council website before relying on them.</li>
+      <li>Batteries and textiles can go out with any recycling collection, in a plastic bag on top of your recycling bin or box.</li>
       <li>If a collection is missed, leave your bins out and check the service status at <a href="https://www.croydon.gov.uk/bin-status" target="_blank" rel="noopener">croydon.gov.uk/bin-status</a>.</li>
     </ul>
   </section>
 
   <footer>
-    <p>Based on Croydon Council's 2025-2026 timetable (ref: Kerbside - Wednesday A), which runs to 25 November 2026. Check the council's site for the next timetable after that.</p>
+    <p>Based on Croydon Council's 2025-2026 timetable (ref: Kerbside - Wednesday A), which runs to 25 November 2026. Garden waste dates are estimated from the fortnightly pattern and are not part of that timetable. Check the council's site for the next timetable after that.</p>
     <p>Full recycling guide: <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk/recycling</a></p>
   </footer>
 </main>
@@ -182,7 +190,8 @@ footer p{margin:0 0 8px}
     food:  {name:"Food", long:"Food caddy", v:"--food"},
     green: {name:"Green", long:"Plastics, glass, cans & cartons", v:"--green"},
     blue:  {name:"Blue", long:"Paper & card", v:"--blue"},
-    black: {name:"Black", long:"General waste", v:"--black"}
+    black: {name:"Black", long:"General waste", v:"--black"},
+    garden:{name:"Garden", long:"Garden waste", v:"--garden"}
   };
   const ORDER = ["food","green","blue","black"];
   const A = ["food","green"], B = ["food","blue","black"];
@@ -204,10 +213,22 @@ footer p{margin:0 0 8px}
   ];
   const EXTRA = {"2026-01-06":"Christmas tree collections start"};
 
+  // Garden waste: every other Thursday, anchored on the council's confirmed date of 1 Oct 2026
+  const GARDEN = [];
+  (function(){
+    const anchor = new Date(2026,9,1), from = new Date(2025,11,1), to = new Date(2026,10,30);
+    let d = new Date(anchor);
+    while (d >= from){ GARDEN.unshift(new Date(d)); d = new Date(d.getFullYear(), d.getMonth(), d.getDate()-14); }
+    d = new Date(anchor.getFullYear(), anchor.getMonth(), anchor.getDate()+14);
+    while (d <= to){ GARDEN.push(new Date(d)); d = new Date(d.getFullYear(), d.getMonth(), d.getDate()+14); }
+  })();
+  const GARDEN_NOTE = "Garden waste dates may change";
+
   const toDate = s => { const [y,m,d]=s.split("-").map(Number); return new Date(y,m-1,d); };
   const key = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
   const SCHED = RAW.map(([s,bins,note]) => ({s, d:toDate(s), bins, note}));
   const BYKEY = Object.fromEntries(SCHED.map(c => [c.s,c]));
+  const GKEY = new Set(GARDEN.map(d => key(d)));
 
   const fmtLong = d => d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"});
   const fmtShort = d => d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"});
@@ -236,6 +257,25 @@ footer p{margin:0 0 8px}
       <rect x="92" y="18" width="10" height="8" rx="2" fill="${lid}"/>
       <line x1="40" y1="52" x2="42" y2="118" stroke="rgba(255,255,255,.08)" stroke-width="4"/>
       <circle cx="36" cy="136" r="9" fill="var(--ink)"/><circle cx="36" cy="136" r="3" fill="var(--bg)"/></svg>`;
+  }
+
+  function gardenSVG(){
+    return `<svg viewBox="0 0 120 150" aria-hidden="true"><path d="M26 34 L94 34 L88 132 L32 132 Z" fill="var(--binbody)"/>
+      <rect x="20" y="22" width="80" height="14" rx="4" fill="var(--garden)"/>
+      <path d="M60 104 C44 96 44 74 60 62 C76 74 76 96 60 104 Z M60 104 L60 72" fill="var(--garden)" stroke="var(--binbody)" stroke-width="2"/>
+      <circle cx="36" cy="136" r="9" fill="var(--ink)"/><circle cx="36" cy="136" r="3" fill="var(--bg)"/></svg>`;
+  }
+  function renderGarden(){
+    const el = document.getElementById("garden");
+    const g = GARDEN.find(d => d >= today);
+    const link = '<a href="https://www.croydon.gov.uk/bin-status" target="_blank" rel="noopener">croydon.gov.uk/bin-status</a>';
+    if (!g){
+      el.innerHTML = `${gardenSVG()}<div><span class="gt">Garden waste</span><span class="gw">No more estimated dates here.</span><span class="caveat">Check your next garden collection at ${link}.</span></div>`;
+      return;
+    }
+    const days = Math.round((g - today)/DAY);
+    const rel = days === 0 ? "Today" : days === 1 ? "Tomorrow, put it out tonight" : days < 7 ? "This " + g.toLocaleDateString("en-GB",{weekday:"long"}) : "In " + days + " days";
+    el.innerHTML = `${gardenSVG()}<div><span class="gt">Garden waste: ${days === 0 ? "today" : fmtLong(g)}</span><span class="gw">${days === 0 ? "Out by 6am" : rel}</span><span class="caveat">These dates may change. Check your next garden collection at ${link}.</span></div>`;
   }
 
   function renderHero(){
@@ -287,7 +327,8 @@ footer p{margin:0 0 8px}
 
   function renderUpcoming(){
     const ul = document.getElementById("upcoming");
-    const list = upcoming.slice(0,6);
+    const list = upcoming.concat(GARDEN.filter(d => d >= today).map(d => ({d, bins:["garden"], note:GARDEN_NOTE})))
+      .sort((a,b) => a.d - b.d).slice(0,8);
     if (!list.length){ ul.innerHTML = `<li><span>No more collections in this timetable.</span></li>`; return; }
     ul.innerHTML = list.map(c => `<li><span class="d">${+c.d === +today ? "Today" : fmtShort(c.d)}${c.note?`<span class="note">${c.note}</span>`:""}</span>${chips(c.bins)}</li>`).join("");
   }
@@ -312,13 +353,18 @@ footer p{margin:0 0 8px}
     for (let d=1; d<=count; d++){
       const dt = new Date(y,m,d), k = key(dt), c = BYKEY[k];
       const isWed = dt.getDay() === 3;
-      const cls = ["cell"]; if (isWed) cls.push("wedcol"); if (c) cls.push("has"); if (+dt === +today) cls.push("today");
+      const g = GKEY.has(k);
+      const cls = ["cell"]; if (isWed) cls.push("wedcol"); if (c || g) cls.push("has"); if (+dt === +today) cls.push("today");
       let inner = `<span class="num">${d}</span>`;
       let label = fmtLong(dt);
       if (c){
         inner += `<div class="bars">${c.bins.map(b=>`<i style="background:${colour(b)}"></i>`).join("")}</div>`;
         if (c.note) inner += `<span class="flag">Moved</span>`;
         label += ": " + c.bins.map(b=>BINS[b].name).join(", ") + (c.note ? ". " + c.note : "");
+      }
+      if (g){
+        inner += `<div class="bars"><i style="background:var(--garden)"></i></div>`;
+        label += ": Garden waste (dates may change)";
       }
       if (EXTRA[k]){ inner += `<span class="flag">Trees</span>`; label += ". " + EXTRA[k]; }
       html += `<div class="${cls.join(" ")}" role="gridcell" aria-label="${label}">${inner}</div>`;
@@ -327,7 +373,8 @@ footer p{margin:0 0 8px}
   }
   document.getElementById("prev").addEventListener("click",()=>{ view = new Date(view.getFullYear(), view.getMonth()-1, 1); renderCal(); });
   document.getElementById("next").addEventListener("click",()=>{ view = new Date(view.getFullYear(), view.getMonth()+1, 1); renderCal(); });
-  document.getElementById("key").innerHTML = ORDER.map(b=>`<span><i style="background:${colour(b)}"></i>${BINS[b].long}</span>`).join("");
+  document.getElementById("key").innerHTML = ORDER.map(b=>`<span><i style="background:${colour(b)}"></i>${BINS[b].long}</span>`).join("")
+    + `<span><i style="background:var(--garden)"></i>Garden waste (may change)</span>`;
 
   // Which bin
   const ITEMS = [
@@ -339,6 +386,10 @@ footer p{margin:0 0 8px}
     ["Milk cartons","green","Empty and rinse"],
     ["Film lids","black","Peel off pots, tubs and trays"],["Nappies","black"],["Crisp packets","black"],
     ["Food scraps","food"],["Fruit and veg peelings","food"],["Teabags","food"],["Coffee grounds","food"],
+    ["Grass cuttings","garden","Garden waste subscribers only"],["Leaves","garden","Garden waste subscribers only"],
+    ["Hedge trimmings","garden","Garden waste subscribers only"],["Small branches and twigs","garden","Garden waste subscribers only"],
+    ["Plants and flowers","garden","Garden waste subscribers only"],["Weeds","garden","Garden waste subscribers only"],
+    ["Batteries",null,"In a plastic bag on top of your recycling bin or box"],["Textiles and clothes",null,"In a plastic bag on top of your recycling bin or box"],
     ["Leftovers","food"],["Meat and fish bones","food"],["Eggshells","food"],["Bread","food"]
   ];
   const q = document.getElementById("q"), res = document.getElementById("results");
@@ -350,12 +401,12 @@ footer p{margin:0 0 8px}
       res.innerHTML = `<li class="empty">Not in this list. Look it up at <a href="https://www.croydon.gov.uk/recycling" target="_blank" rel="noopener">croydon.gov.uk/recycling</a>.</li>`;
       return;
     }
-    res.innerHTML = hits.map(([n,b,t]) => `<li><span>${n}${t?`<span class="tip">${t}</span>`:""}</span>${chips([b])}</li>`).join("");
+    res.innerHTML = hits.map(([n,b,t]) => `<li><span>${n}${t?`<span class="tip">${t}</span>`:""}</span>${b ? chips([b]) : '<span class="chips"><span class="chip">On top of recycling</span></span>'}</li>`).join("");
   }
   q.addEventListener("input", renderResults);
   document.getElementById("toggle").addEventListener("click", () => { showFollowing = !showFollowing; renderHero(); });
 
-  renderHero(); renderUpcoming(); renderCal();
+  renderHero(); renderGarden(); renderUpcoming(); renderCal();
 })();
 </script>
 </body>

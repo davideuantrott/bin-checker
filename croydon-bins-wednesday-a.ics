@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Bin schedule//Croydon Wednesday A//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Bin collections (Croydon Wed A)
+X-WR-CALNAME:Bin collections (Croydon)
 X-WR-TIMEZONE:Europe/London
 BEGIN:VEVENT
 UID:2025-12-03@croydon-bins-wed-a
@@ -794,5 +794,395 @@ SUMMARY:Christmas tree collections start
 DESCRIPTION:Put your real tree out from today. It will be collected as soon
   as possible.
 TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2025-12-11@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20251211
+DTEND;VALUE=DATE:20251212
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2025-12-25@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20251225
+DTEND;VALUE=DATE:20251226
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-01-08@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260108
+DTEND;VALUE=DATE:20260109
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-01-22@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260122
+DTEND;VALUE=DATE:20260123
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-02-05@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260205
+DTEND;VALUE=DATE:20260206
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-02-19@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260219
+DTEND;VALUE=DATE:20260220
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-03-05@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260305
+DTEND;VALUE=DATE:20260306
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-03-19@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260319
+DTEND;VALUE=DATE:20260320
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-04-02@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260402
+DTEND;VALUE=DATE:20260403
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-04-16@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260416
+DTEND;VALUE=DATE:20260417
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-04-30@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260501
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-05-14@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260514
+DTEND;VALUE=DATE:20260515
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-05-28@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260528
+DTEND;VALUE=DATE:20260529
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-06-11@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260611
+DTEND;VALUE=DATE:20260612
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-06-25@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260625
+DTEND;VALUE=DATE:20260626
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-07-09@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260709
+DTEND;VALUE=DATE:20260710
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-07-23@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260723
+DTEND;VALUE=DATE:20260724
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-08-06@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-08-20@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260820
+DTEND;VALUE=DATE:20260821
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-09-03@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260903
+DTEND;VALUE=DATE:20260904
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-09-17@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-10-01@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-10-15@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-10-29@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-11-12@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:garden-2026-11-26@croydon-bins-wed-a
+DTSTAMP:20260929T070822Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Bins: Garden waste
+DESCRIPTION:Garden waste collection (every other Thursday). Dates may 
+ change - check croydon.gov.uk/bin-status for your next collection.
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Put the garden waste bin out tonight
+TRIGGER:-PT4H
+END:VALARM
 END:VEVENT
 END:VCALENDAR
